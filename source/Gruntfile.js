@@ -49,7 +49,7 @@ module.exports = function (grunt) {
         autoprefixer: {
             screen: {
                 options: {
-                    browsers: ['last 2 version']
+                    browsers: ['last 2 version', 'ie 9']
                 },
                 src: '<%= project.dirs.styles.out %>/<%= project.stylesheets.screen %>',
                 dest: '<%= project.dirs.styles.out %>/<%= project.stylesheets.screen %>'
