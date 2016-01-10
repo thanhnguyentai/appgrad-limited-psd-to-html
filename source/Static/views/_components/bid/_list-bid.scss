@@ -105,11 +105,14 @@ $bidBorderColor: #e8e9ed;
 			width: rem(240px);
 			float: left;
 			text-align: center;
-			padding-top: rem(38px);
+			position: absolute;
+			left: 0px;
+			@include vertical-align(absolute);
 		}
 		&__logo-img{
 			display: inline-block;
 			max-width: 90%;
+			margin-bottom: rem(15px);
 		}
 		&__logo-name{
 			display: inline-block;
@@ -117,7 +120,7 @@ $bidBorderColor: #e8e9ed;
 			text-align: center;
 			color: $black;
 			font-size: rem(18px);
-			line-height: rem(50px);
+			line-height: rem(20px);
 			@include latoNormal();
 		}
 
