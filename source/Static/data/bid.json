@@ -1,0 +1,11 @@
+{
+	"bidOne": {
+		"logoImage": "./img/logo-transporter-1.png",
+		"logoName": "Fedex"
+	},
+
+	"bidTwo": {
+		"logoImage": "./img/logo-transporter-2.png",
+		"logoName": "DHL"
+	}
+}

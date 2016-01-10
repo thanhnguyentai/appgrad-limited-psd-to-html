@@ -1,0 +1,75 @@
+.main-menu {
+	&__container{
+		background-color: $blueMain;
+	}
+
+	&__content{
+		height: rem(43px);
+	}
+
+	&__logo-link{
+		text-decoration: none;
+		display: inline-block;
+		padding: rem(0 24px);
+	}
+	&__logo-img{
+		display: inline-block;
+	}
+	&__ul{
+		display: inline-block;
+		margin: rem(0 0 0 8px);
+		padding: 0;
+	}
+	&__li{
+		display: inline-block;
+	}
+	&__a{
+		display: inline-block;
+		text-decoration: none;
+		color: $white;
+		font-size: rem(14px);
+		line-height: rem(14px);
+		padding: rem(16px 18px 13px);
+		@include latoThin();
+	}
+	&__user-container{
+		display: inline-block;
+		float: right;
+		font-size: 0;
+		vertical-align: middle;
+	}
+	&__user-notify-link{
+		display: inline-block;
+		width: rem(25px);
+		height: rem(25px);
+		background: url('../img/icon-notify.png') no-repeat center center;
+		position: relative;
+		vertical-align: middle;
+	}
+	&__user-notify-text{
+		display: inline-block;
+		text-decoration: none;
+		color: $white;
+		font-size: rem(12px);
+		line-height: rem(17px);
+		@include latoThin();
+		text-align: center;
+		width: rem(17px);
+		height: rem(17px);
+		border-radius: 100%;
+		background-color: $lightBlue;
+		position: absolute;
+		top: rem(-5px);
+		right: rem(-8px);
+	}
+	&__user-name{
+		display: inline-block;
+		vertical-align: middle;
+		text-decoration: none;
+		color: $white;
+		font-size: rem(14px);
+		line-height: rem(14px);
+		padding: rem(16px 20px 13px 20px);
+		@include latoThin();
+	}
+}

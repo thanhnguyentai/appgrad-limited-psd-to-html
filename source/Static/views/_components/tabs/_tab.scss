@@ -1,0 +1,27 @@
+.tabs-selection{
+	&__container{
+		padding: rem(0 44px);
+		font-size: 0;
+	}
+	&__item{
+		@include latoNormal();
+		font-size: rem(14px);
+		line-height: rem(14px);
+		padding: rem(10px 14px);
+		display: inline-block;
+		text-decoration: none;
+		color: $black;
+		border-top: rem(1px solid #ebebeb);
+		border-right: rem(1px solid #ebebeb);
+
+		&:nth-child(1){
+			border-left: rem(1px solid #ebebeb);		
+		}
+	}
+
+	&__item__selected{
+		@include latoBold();
+		color: $white;
+		background-color: $blueMain;
+	}
+}

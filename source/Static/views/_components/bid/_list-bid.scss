@@ -1,0 +1,230 @@
+.list-bid{
+	&__detail-content{
+		padding-top: rem(55px);
+		padding-bottom: rem(55px);
+	}
+}
+
+$bidBorderColor: #e8e9ed;
+
+.bidding-quote{
+	&__container{}
+	&__header{
+		height: rem(43px);
+		background-color: $blueMain;
+		font-size: 0;
+		padding: rem(0 24px);
+	}
+	&__header-price{
+		display: inline-block;
+		font-size: rem(18px);
+		line-height: rem(43px);
+		color: $white;
+		@include latoBold();
+	}
+	&__header-time{
+		display: inline-block;
+		font-size: rem(14px);
+		line-height: rem(43px);
+		margin: rem(0 0 0 4px);
+
+		&__label{
+			display: inline-block;
+			@include latoThin();
+			color: $white;
+		}
+		&__value{
+			display: inline-block;
+			@include latoBold();
+			color: $lightBlue;
+		}
+	}
+
+	&__price-filter{
+		display: inline-block;
+		float: right;
+	}
+
+	&__price-improve-link{
+		display: inline-block;
+		@include latoThin();
+		color: $lightBlue;
+		font-size: rem(14px);
+		line-height: rem(43px);
+		text-decoration: none;
+	}
+
+	&__price-dropdown{
+		display: inline-block;
+		@include latoThin();
+		font-size: rem(14px);
+		line-height: rem(33px);
+		height: rem(33px);
+		background-color: $white;
+		color: $black;
+		border: rem(1px solid #cccccc);
+		margin: rem(0 0 0 23px);
+		padding: rem(0 10px);
+	}
+
+	// list bidding quotes
+	&__list{
+		border: rem(1px solid $bidBorderColor);
+		border-bottom: none;
+		padding: rem(29px 0 0);
+	}
+	&__item{
+		overflow: hidden;
+		position: relative;
+		padding: rem(8px 0);
+		vertical-align: middle;
+		width: 100%;
+
+		&:nth-child(2n){
+			background-color: $bgItemInList;
+		}
+
+		&:last-child{
+			.bidding-quote__item-border-bottom{
+				display: none;
+			}
+		}
+
+		// logo - left
+		&__logo-container{
+			width: rem(240px);
+			float: left;
+			text-align: center;
+			padding-top: rem(38px);
+		}
+		&__logo-img{
+			display: inline-block;
+			max-width: 90%;
+		}
+		&__logo-name{
+			display: inline-block;
+			width: 100%;
+			text-align: center;
+			color: $black;
+			font-size: rem(18px);
+			line-height: rem(50px);
+			@include latoNormal();
+		}
+
+
+		// price - right
+		&__price-container{
+			width: rem(300px);
+			float: right;
+		}
+		&__price-line{
+			text-align: center;
+			margin-bottom: rem(10px);
+		}
+		&__price-number{
+			@include latoThin();
+			font-size: rem(41px);
+			line-height: rem(44px);
+			display: inline-block;
+			color: $lightBlue;
+		}
+		&__price-original-label{
+			@extend .normal-text;
+			display: inline-block;
+		}
+		&__price-original-number{
+			@extend .normal-text;
+			display: inline-block;
+			margin: rem(0 0 0 14px);
+			text-decoration: line-through;
+		}
+		&__price-bid{
+			font-size: rem(18px);
+			line-height: rem(18px);
+			@include latoLight();
+			display: inline-block;
+			color: $white;
+			padding: rem(9px 35px);
+			background-color: #08a831;
+			border-radius: rem(5px);
+		}
+		&__price-improve{
+			@extend .normal-text;
+			display: inline-block;
+			color: $lightBlue;
+			text-decoration: none;
+		}
+
+		// border
+		&-border-middle{
+			position: absolute;
+			top: rem(8px);
+			bottom: rem(8px);
+			right: rem(308px);
+			width: rem(1px);
+			background-color: $bidBorderColor;
+		}
+		&-border-bottom{
+			position: absolute;
+			left: rem(7px);
+			right: rem(7px);
+			bottom: 0;
+			height: rem(1px);
+			background-color: $bidBorderColor;
+		}
+
+		// information - center
+		&__information-container{
+			margin: rem(0 315px 0 240px);
+			padding: rem(0 20px);
+			font-size: 0;
+		}
+
+		&__information-user{
+			border-bottom: rem(1px solid $bidBorderColor);
+			padding: rem(20px 0);
+		}
+
+		&__user-name{
+			@extend .normal-text;
+			display: inline-block;
+		}
+		&__user-separate{
+			@extend .normal-text;	
+			display: inline-block;
+			padding: rem(0 15px);
+		}
+		&__user-date{
+			@extend .normal-text;
+			display: inline-block;
+		}
+		&__information-attach{
+			border-bottom: rem(1px solid $bidBorderColor);
+			padding: rem(18px 0);
+		}
+		&__information-attach-text{
+			@extend .normal-text;
+			display: inline-block;
+			background: url('../img/icon-attach.png') no-repeat left center;
+			padding: rem(0 0 0 20px);
+		}
+		&__information-attach-link{
+			@extend .normal-text;
+			display: inline-block;
+			color: $lightBlue;
+			margin: rem(0 0 0 5px);
+			text-decoration: none;
+		}
+
+		&__information-reference{
+			padding: rem(10px 0);
+		}
+		&__information-reference-item{
+			@extend .normal-text;
+			display: inline-block;
+			color: $lightBlue;
+			margin: rem(0 20px 0 0);
+			text-decoration: none;
+		}
+	}
+}

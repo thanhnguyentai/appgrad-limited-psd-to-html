@@ -1,0 +1,25 @@
+<div class="bidding-quote__container">
+	<div class="bidding-quote__header">
+		<span class="bidding-quote__header-price">
+			2 Bids £2,400-£2,450
+		</span>
+		<span class="bidding-quote__header-time">
+			<span class="bidding-quote__header-time__label">Bid closed in</span>
+			<span class="bidding-quote__header-time__value">03:21:05</span>
+		</span>
+
+		<div class="bidding-quote__price-filter">
+			<a class="bidding-quote__price-improve-link" href="#" title="">Improve all bids</a>
+			<select class="bidding-quote__price-dropdown">
+				<option value="1">Price-lowest first</option>
+				<option value="2">Price-highest first</option>
+			</select>
+		</div>
+	</div>
+	<div class="bidding-quote__list">
+		{{> _bid-item bid.bidOne }}
+		{{> _bid-item bid.bidTwo }}
+		{{> _bid-item bid.bidOne }}
+		{{> _bid-item bid.bidTwo }}
+	</div>
+</div>

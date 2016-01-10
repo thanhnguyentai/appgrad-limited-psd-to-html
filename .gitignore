@@ -1,2 +1,6 @@
 design
 source/node_modules
+source/css
+source/fonts
+source/img
+source/*.html

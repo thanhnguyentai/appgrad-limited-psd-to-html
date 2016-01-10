@@ -1,80 +1,54 @@
-
 html, body {
-	margin: 0;
-	padding: 0;
-	font-size: 16px;
-	position: relative;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    position: relative;
 }
 
 body {
-	background-color: $white;
+    background-color: $white;
 }
 
 .page-wrapper {
-	position: relative;
-	overflow: hidden;
+    position: relative;
+    overflow: hidden;
 }
 
 .page-wrapper-content {
-	position: relative;
-	border-top: rem(1px solid $blueBorderTop);
+    position: relative;
 }
 
 a, img {
-	border: none;
-	outline: none;
+    border: none;
+    outline: none;
 }
 
 .overflow-hidden {
-	overflow: hidden;
+    overflow: hidden;
 }
 
 .position-relative {
-	position: relative;
+    position: relative;
 }
 
+%content-wrapper{
+    min-width: rem($minView);
+    max-width: rem($maxView);
+    margin: 0 auto;
+    padding: rem(0 15px);
 
-.gb-view-container{
-	width: auto;
-	margin: 0 auto;
-
-	@include respond-to-min($maxView){
-		width: rem($maxView);
-	}
+    @include respond-to-min($largeScreen){
+        padding: rem(0 63px);
+    }
 }
 
-.without-padding-left{
-	@include respond-to-min($maxView){
-		padding-left: 0;
-	}
-}
-.without-padding-right{
-	@include respond-to-min($maxView){
-		padding-right: 0;
-	}
+.global-content-wrapper{
+    @extend %content-wrapper;
 }
 
-.gb-column{
-	&:nth-child(2n+1){
-		@extend .without-padding-left;
-	}
-
-	&:nth-child(2n){
-		@extend .without-padding-right;
-	}
-
-	&__big{
-		@include respond-to-min($desktopSize){
-			width: 72%;
-			padding-right: rem(10px);
-		}
-	}
-
-	&__small{
-		@include respond-to-min($desktopSize){
-			width: 28%;
-			padding-left: rem(10px);
-		}
-	}
+.normal-text{
+    color: $black;
+    font-size: rem(14px);
+    line-height: rem(18px);
+    @include latoThin();
 }
-

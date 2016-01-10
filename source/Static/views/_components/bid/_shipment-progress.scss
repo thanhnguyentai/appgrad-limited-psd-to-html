@@ -1,0 +1,145 @@
+$grayBorderGroup: #c2c3c3;
+$graySeparate: #d7d7d7;
+
+@mixin shipment-progress-text-style() {
+    font-size: rem(14px);
+    line-height: rem(24px);
+}
+
+.shipment-progress{
+	// top content
+	&__group-container{
+		border-bottom: rem(2px solid $grayBorderGroup);
+	}
+	&__title-content{
+		text-align: center;
+		padding: rem(10px 0 12px);
+		vertical-align: middle;
+	}
+	&__title-image{
+		display: inline-block;
+		vertical-align: middle;
+	}
+	&__title-text{
+		display: inline-block;
+		vertical-align: middle;
+		color: $black;
+		font-size: rem(24px);
+		line-height: rem(26px);
+		padding: rem(0 25px 0 18px);
+		background: url('../img/icon-arrow-down.png') no-repeat right top 11px;
+		margin: 0;
+		@include latoThin();
+	}
+
+	// main content
+	&__detail-content{
+		padding-top: rem(35px);
+		padding-bottom: rem(27px);
+		overflow: hidden;
+	}
+	// left information
+	&__detail-content__left{
+		margin: rem(0 330px 0 0);
+	}
+	&__status-container{
+		padding: rem(0 0 20px);
+		margin: rem(0 0 20px);
+		border-bottom: rem(1px solid #e8e9ed);
+	}
+	&__status-item{
+		display: inline-block;
+		font-size: 0;
+		&:nth-child(1){
+			margin: rem(0 20px 0 0);
+		}
+	}
+	&__status-label{
+		display: inline-block;
+		@include shipment-progress-text-style();
+		@include latoThin();
+		color: $black;
+	}
+	&__status-address{
+		display: inline-block;
+		@include shipment-progress-text-style();
+		color: $lightBlue;
+		@include latoBold();
+		padding: rem(0 0 0 2px);
+	}
+	&__status-separate{
+		display: inline-block;
+		@include shipment-progress-text-style();
+		color: $graySeparate;
+		@include latoThin();
+		padding: rem(0 8px);
+	}	
+	&__status-time{
+		display: inline-block;
+		@include shipment-progress-text-style();
+		color: $black;
+		@include latoNormal();
+
+		&__night{
+			padding: rem(0 14px 0 0);
+			background: url('../img/icon-moon.png') no-repeat right center;
+		}
+		&__day{
+			padding: rem(0 18px 0 0);
+			background: url('../img/icon-sun.png') no-repeat right top 5px;
+		}
+	}
+	&__status-description{
+		@include shipment-progress-text-style();
+		@include latoThin();
+		color: $black;
+	}
+	&__status-button-less{
+		display: inline-block;
+		color: $lightBlue;
+		text-decoration: none;
+	}
+
+
+	// right information
+	&__detail-content__right{
+		width: rem(330px);
+		padding: rem(0 0 0 40px);
+		float: right;
+	}
+	&__information-common{
+		font-size: 0;
+		margin: rem(0 0 10px);
+	}
+	&__information-title{
+		@include shipment-progress-text-style();
+		color: $black;
+		@include latoBold();
+		display: inline-block;
+	}
+	&__information-separate{
+		color: $graySeparate;
+		@include shipment-progress-text-style();
+		@include latoThin();
+		display: inline-block;
+		padding: rem(0 15px);
+	}
+	&__information-detail{
+		font-size: 0;
+		margin: rem(0 0 10px);
+	}
+	&__information-value{
+		@include shipment-progress-text-style();
+		color: $black;
+		@include latoNormal();
+		padding: rem(0 0 0 2px);
+	}
+
+	&__information-description{
+		@include shipment-progress-text-style();
+		color: $black;
+		@include latoNormal();
+		margin: 0;
+		padding: 0;
+	}
+}
