@@ -52,6 +52,10 @@ $bidBorderColor: #e8e9ed;
 		font-size: rem(14px);
 		line-height: rem(43px);
 		text-decoration: none;
+
+		&:hover{
+			text-decoration: underline;
+		}
 	}
 
 	&__price-dropdown{
@@ -160,12 +164,20 @@ $bidBorderColor: #e8e9ed;
 			padding: rem(9px 35px);
 			background-color: #08a831;
 			border-radius: rem(5px);
+
+			&:hover{
+				 background-color: #078d29;
+			}
 		}
 		&__price-improve{
 			@extend .normal-text;
 			display: inline-block;
 			color: $lightBlue;
 			text-decoration: none;
+
+			&:hover{
+				text-decoration: underline;
+			}
 		}
 
 		// border
@@ -227,6 +239,10 @@ $bidBorderColor: #e8e9ed;
 			color: $lightBlue;
 			margin: rem(0 0 0 5px);
 			text-decoration: none;
+
+			&:hover{
+				text-decoration: underline;
+			}
 		}
 
 		&__information-reference{
@@ -238,6 +254,10 @@ $bidBorderColor: #e8e9ed;
 			color: $lightBlue;
 			margin: rem(0 20px 0 0);
 			text-decoration: none;
+
+			&:hover{
+				text-decoration: underline;
+			}
 		}
 	}
 }

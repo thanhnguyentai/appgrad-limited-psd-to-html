@@ -30,7 +30,12 @@
 		font-size: rem(14px);
 		line-height: rem(14px);
 		padding: rem(16px 18px 13px);
-		@include latoThin();
+		@include latoLight();
+
+		&:hover{
+			background: $white;
+			color: $blueMain;
+		}
 	}
 	&__user-container{
 		display: inline-block;
